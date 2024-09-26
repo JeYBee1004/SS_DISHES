@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>❌⭕❌❌</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap">
+    <link rel="stylesheet" href="sansiro.css">
+    <style>
+       
+    </style>
+</head>
+<body>
+    <header>
+        <h1><b>SanSiro Dishes</b></h1>
+        <nav>
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="AboutUs.html">About Us</a></li>
+                <li><a href="ContactUs.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <section id="intro">
+            <h2>WELCOME TO SanSiro Dishes</h2>
+            <p>Step into a world of mouthwatering flavors crafted with the freshest ingredients and served with a smile, whether you're dining in, taking out, or ordering online.</p>
+            <p>Join us today and taste the difference.</p>
+        </section>
+        <section id="menu">
+            <h2>TODAY'S MENU</h2>
+            <ul>
+                <li>Chapati <span>20ksh</span></li>
+                <li>Pilau <span>100ksh</span></li>
+                <li>Chapo Beef <span>200ksh</span></li>
+                <li>Chapo Minji <span>100ksh</span></li>
+                <li>Chapo Beans/Ndengu <span>80ksh</span></li>
+                <li>Ugali Beef <span>200ksh</span></li>
+                <li>Ugali Omena <span>100ksh</span></li>
+                <li>Ugali Mayai <span>110ksh</span></li>
+            </ul>
+            <button id="orderNowBtn" style="margin-top: 20px; padding: 15px 40px; font-size: 1.5em;" onclick="window.location.href='C:/Users/Admin/OneDrive/Desktop/Sansiro/Order.html'">ORDER NOW</button>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 All rights reserved</p>
+        <p>Follow us on:</p>
+        <ul class="social-media">
+            <li><a href="https://www.instagram.com/SanSiroDishes">@SanSiroDishes</a></li>
+            <li><a href="https://www.twitter.com/SanSiroDishes">@SanSiroDishes</a></li>
+            <li><a href="https://www.facebook.com/SanSiroDishes">@SanSiroDishes</a></li>
+        </ul>
+    </footer>
+    <script src="sansiro.js">
+        document.addEventListener("DOMContentLoaded", function() {
+            const orderNowBtn = document.getElementById('orderNowBtn');
+            const todaysMenuBtn = document.getElementById('todaysMenuBtn');
+
+            orderNowBtn.addEventListener('click', function() {
+                window.location.href = 'C:/Users/Admin/OneDrive/Desktop/Sansiro/Order.html';
+            });
+
+            todaysMenuBtn.addEventListener('click', function() {
+                alert("Today's menu will be displayed here.");
+            });
+        });
+    </script>
+</body>
+</html>
+

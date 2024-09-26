@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>❌⭕❌❌</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap">
+    <link rel="stylesheet" href="contactus.css">
+</head>
+<body>
+    <style>
+        
+    </style>
+    <div class="container">
+        <section class="contact-info">
+            <h1>Contact Us</h1>
+            <p>0712***678</p>
+            <p>or</p>
+            <p>0798***432</p>
+            <div class="icons">
+                <span class="material-icons">call</span>
+                <span class="material-icons">sms</span>
+            </div>
+        </section>
+        <section class="feedback">
+            <h1>Comment/Feedback</h1>
+            <form id="feedback-form">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const feedbackForm = document.getElementById('feedback-form');
+            feedbackForm.addEventListener('submit', function (event) {
+                event.preventDefault();
+                const message = document.getElementById('message').value;
+                if (message.trim() === '') {
+                    alert('Please enter a message.');
+                    return;
+                }
+                alert('Your feedback has been sent. Thank you!');
+                feedbackForm.reset();
+            });
+        });
+    </script>
+</body>
+</html>

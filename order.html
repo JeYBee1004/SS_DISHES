@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>❌⭕❌❌</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap">
+    <link rel="stylesheet" href="order.css">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Order Now</h2>
+        <section id="credentials">
+            <h2>Credentials</h2>
+            <table>
+                <tr>
+                    <td><b>Name</b></td>
+                    <td><input type="text" placeholder="Name"></td>
+                </tr>
+                <tr>
+                    <td><b>Contact</b></td>
+                    <td><input type="number" placeholder="Contact"></td>
+                </tr>
+                <tr>
+                    <td><b>Order</b></td>
+                    <td><input type="text" placeholder="Order"></td>
+                </tr>
+            </table>
+        </section>
+        <section id="payment">
+            <h2>Pay Via:</h2>
+            <table>
+                <tr>
+                    <td><input type="radio" id="mpesa" name="payment" value="mpesa"><label for="mpesa">Mpesa</label></td>
+                    <td><input type="radio" id="cash" name="payment" value="cash"><label for="cash">Cash</label></td>
+                </tr>
+            </table>
+            <div id="mpesa-details" class="payment-details">
+                <ul>
+                    <li><b><i>M-PESA</i></b></li>
+                    <li><b>Buy Goods & Services</b></li>
+                    <li>0712***678</li>
+                </ul>
+            </div>
+            <div id="cash-details" class="payment-details">
+                <table>
+                    <tr>
+                        <td><b><i>Cash</i></b></td>
+                        <td><input type="text" placeholder="Enter Cash Amount"></td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const mpesaDetails = document.getElementById('mpesa-details');
+            const cashDetails = document.getElementById('cash-details');
+            
+            document.querySelectorAll('input[type="radio"][name="payment"]').forEach(function(radio) {
+                radio.addEventListener('change', function() {
+                    if (this.value === 'mpesa') {
+                        mpesaDetails.style.display = 'block';
+                        cashDetails.style.display = 'none';
+                    } else if (this.value === 'cash') {
+                        mpesaDetails.style.display = 'none';
+                        cashDetails.style.display = 'block';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
